@@ -1,2 +1,2 @@
 # Postman-OpenAI-API-Testing
-Тестирование OpenAI API в Postman
+В данном примере я буду использовать GET и POST запросы к OpenAI API в Postman.
