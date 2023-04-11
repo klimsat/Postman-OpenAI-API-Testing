@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"model\": \"gpt-3.5-turbo\",\r\n    \"messages\": [\r\n        {\r\n            \"role\": \"system\",\r\n            \"content\": \"Ты виртуальный ассистент.\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"Расскажи интересную историю про QA инженера.\"\r\n        }\r\n    ],\r\n    \"max_tokens\": 4000,\r\n    \"temperature\": 0,\r\n    \"top_p\": 1,\r\n    \"n\": 1\r\n}",
+					"raw": "{\r\n    \"model\": \"gpt-3.5-turbo\",\r\n    \"messages\": [\r\n        {\r\n            \"role\": \"system\",\r\n            \"content\": \"Общайся в режиме Senior QA Engineer. Senior QA Engineer знает практически всё об обеспечении качества разрабатываемого ПО. Не будь как ИИ, будь как живой человек. Отвечай на мои вопросы как можно более развёрнуто с пояснениями и примерами. Придерживайся принципа: Я объясню как это работает.\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"Привет. Чем ты занимаешь в своей работе?\"\r\n        }\r\n    ],\r\n    \"max_tokens\": 3000,\r\n    \"temperature\": 0,\r\n    \"top_p\": 1,\r\n    \"n\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,21 +39,9 @@
 		},
 		{
 			"name": "GET models",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "https://api.openai.com/v1/models",
 					"protocol": "https",
@@ -76,7 +64,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{openAITOKEN}}",
+				"value": "{{APITOKEN}}",
 				"type": "string"
 			}
 		]
@@ -103,7 +91,7 @@
 	],
 	"variable": [
 		{
-			"key": "openAITOKEN",
+			"key": "APITOKEN",
 			"value": "YOUR_API_KEY"
 		}
 	]
